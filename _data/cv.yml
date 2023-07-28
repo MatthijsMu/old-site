@@ -35,70 +35,109 @@
           - 141 EC
           - GPA 9.5/10
 
+    - title: VWO (Dutch Pre-University Education)
+      institution: Mill-Hill College, Goirle
+      year: 2016-2022
+      description:
+        - Highest level of dutch secondary education, prior to entering university.
+        - Specialisation in Nature and Technology / Nature and Health
+        - GPA 9.5/10 (summa cum laude)
+        - Courses in Physics (10) / Chemistry (10) / Biology (9) / Mathematics B (10) / Mathematics D (10) / Latin (10) / Spanish (10) / English (9) / Dutch (8)
+        - 
+
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Summer-school Participant
+      institution: The Cornell, Maryland, Max Planck Pre-doctoral Research School
+      year: august 2023
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
-      description:
-        - Description 1.
-        - Description 2.
+        - One of 90 selected participants.
+        - Will engage with state-of-art Computer Science research and emerging trends in the field.
+        - Meet and collaborate with like-minded students from all over the world.
+        - Hosted at Max-Planck Institute for Software Science in Saarbruecken, Germany.
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
+    - title: Pre-University Student
+      institution: Radboud Pre-University College of Science
+      year: 2020-2022
+      description: Finished 39 EC of B.S. Mathematics courses at Radboud University, while in secondary school
+        - Calculus A (10/10, 6 EC)
+        - Calculus B (10/10, 6 EC)
+        - Introduction Mathematics (10/10, 6 EC)
+        - Linear Algebra A (10/10, 3 EC)
+        - Linear Algebra B (10/10, 3 EC)
+        - Probability Theory (9.5/10, 3 EC)
+        - Group Theory (10/10, 6 EC)
 
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
+    - title: Econasium Programme
+      institution: Tilburg University
+      year: 2019-2022
+      description: An extracurricular programme for VWO-students offered by Tilburg University, that includes a statistics course and excursions.
+    
+    - title: Fast-lane English 
+      institution: Mill-Hill College, Goirle
+      year: 2019-2022
+      description: Finished programme of examination (PTA) for secondary-school English in 2 years instead of 3. This included doing my central final exam (CSE) a year ahead of schedule.
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
 
 - title: Open Source Projects
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: TODO (_data/cv.yml) #TODO
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
-      items: 
-        - Nobel Prize in Physics 
-        - Matteucci Medal
-    - year: 2029
-      items: 
-        - Max Planck Medal
+    - title: Finalist (16th/3399) Dutch Mathematical Olympiad
+      year: September 2021
+      description: ended 16th overall and 9th in my age class (nationwide).
+
+    - title: Socrates Honours Award
+      year: May 2023
+      description: For being the highest-scoring (high-school GPA 9.5) newcomer to the Socrates International Honours Society of 2022. Winners are anounced in June.
+
+    - title: OMO Profile Project Award: 
+      year: July 2022
+      description: 1st place (34 schools, 2431 exam candidates). Represented Mill-Hill College with my research project on Reinforcement Learning. Received for this a prize of €1200,-
+
+    - title: Mención Honorı́fica
+      institution: La Consejerı́a de Educación de la Embajada de España en Paı́ses Bajos
+      year: A honorable mention for obtaining grade 9.6 on the central exam (CSE) for Spanish Language and Culture.
+
+    - title: W4-Kangaroo Mathematics Contest
+      year: March 2019
+      description: Variant VWO-3, wizPROF. 130/150 pts.
 
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Statistics
       items: 
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - Hope to make some future blogs on optimality theory.
+        - Would love to fit a Statistical Mechanics course into my curriculum.
+        - Markov Chains
+        - Would love to take an introductory machine learning course featuring Bayesian Networks.
+        - Will probably take a master specialized towards stochastics.
+
+    - title: Quantum Mechanics
       items:
-        - Description 1.
-        - Description 2.
+        - Followed an introductory course in the first year of B.S.
+        - Will probably follow it up with a more advanced course in the second year.
+        - Currently reading Griffith's classic Introduction.
+
+    - title: Algorithms and Data Structures
+      items:
+        - Spending the vacation inside CLRS.
+        - Will maybe do some C implementations of data structures on my blog.
+
+    - title: Functional Programming
+      items:
+        - Have not followed the course yet, but do own the book (Programming in Haskell, Graham Hutton).
+        - Check my GitHub repo for answers to exercises in the book.
+
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - <u>Hobbies:</u> Chess, Watercolour, Drawing in general.
+    - <u>Reading:</u>
