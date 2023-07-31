@@ -2,19 +2,19 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Matthijs Personal Portfolio Page # the website title (if blank, full name will be used instead)
+title: Matthijs Muis # the website title (if blank, full name will be used instead)
 first_name: Matthijs
 middle_name:
 last_name: Muis
-email: 
+email: matthijs.muis@ru.nl
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A portfolio website mostly for blogging about Mathematics and Computer Science related things (I hope
-  to occasionally include some ideas from quantum mechanics as well).
+  Matthijs Muis, Undergraduate student Mathematics, Computer Science at Radboud University Nijmegen.
+  Portfolio + Teaching + Blog + Personal Stuff.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
   Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords:   # add your own keywords or leave empty
+keywords: Undergraduate student Mathematics, Computer Science, Radboud University Nijmegen, Portfolio, Teaching, Blog # add your own keywords or leave empty
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -46,14 +46,14 @@ repo_trophies:
 # will use title and url fields
 # Take a look to https://github.com/jekyll/jekyll-feed for more customization
 
-rss_icon: true
+rss_icon: false
 
 # -----------------------------------------------------------------------------
 # Layout
 # -----------------------------------------------------------------------------
 
 navbar_fixed: true
-footer_fixed: true
+footer_fixed: false
 
 # Dimensions
 max_width: 800px
@@ -64,7 +64,7 @@ max_width: 800px
 # Open Graph & Schema.org
 # -----------------------------------------------------------------------------
 # Display links to the page with a preview object on social media.
-serve_og_meta: false # Include Open Graph meta tags in the HTML head
+serve_og_meta: true # Include Open Graph meta tags in the HTML head
 serve_schema_org: false # Include Schema.org in the HTML head
 og_image: # The site-wide (default for all links) Open Graph preview image
 
@@ -72,11 +72,11 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 # Social integration
 # -----------------------------------------------------------------------------
 
-github_username: MatthijsMu # your GitHub user name
+github_username: matthijsmu # your GitHub user name
 gitlab_username: # your GitLab user name
 twitter_username: # your Twitter handle
 mastodon_username: # your mastodon instance+username in the format instance.tld/@username
-linkedin_username: Matthijs Muis # your LinkedIn user name
+linkedin_username: matthijs-muis # your LinkedIn user name
 telegram_username: # your Telegram user name
 scholar_userid: # your Google Scholar ID
 semanticscholar_id: # your Semantic Scholar ID
@@ -108,7 +108,8 @@ discord_id: # your discord id (18-digit unique numerical identifier)
 zotero_username: # your zotero username
 
 contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
+  You can contact me via email: <a href= "mailto:matthijs.muis@ru.nl">matthijs.muis@ru.nl</a>.
+
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -125,7 +126,7 @@ bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: Byte-Size Ideas # blog_name will be displayed in your blog page
-blog_nav_title: Ideas # your blog must have a title for it to be displayed in the nav bar
+blog_nav_title: blog # your blog must have a title for it to be displayed in the nav bar
 blog_description: A bit of theory on everything.
 permalink: /blog/:year/:title/
 
@@ -363,8 +364,8 @@ enable_masonry:             true   # enables automatic project cards arrangement
 enable_math:                true   # enables math typesetting (uses MathJax)
 enable_tooltips:            false  # enables automatic tooltip links generated
                                    # for each section titles on pages and posts
-enable_darkmode:            true   # enables switching between light/dark modes
-enable_navbar_social:       false  # enables displaying social links in the
+enable_darkmode:            false   # enables switching between light/dark modes
+enable_navbar_social:       true  # enables displaying social links in the
                                    # navbar on the about page
 enable_project_categories:  true   # enables categorization of projects into
                                    # multiple categories

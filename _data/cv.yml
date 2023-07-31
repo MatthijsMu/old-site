@@ -96,7 +96,7 @@
       year: May 2023
       description: For being the highest-scoring (high-school GPA 9.5) newcomer to the Socrates International Honours Society of 2022. Winners are anounced in June.
 
-    - title: OMO Profile Project Award: 
+    - title: OMO Profile Project Award 
       year: July 2022
       description: 1st place (34 schools, 2431 exam candidates). Represented Mill-Hill College with my research project on Reinforcement Learning. Received for this a prize of €1200,-
 
@@ -123,7 +123,7 @@
       items:
         - Followed an introductory course in the first year of B.S.
         - Will probably follow it up with a more advanced course in the second year.
-        - Currently reading Griffith's classic Introduction.
+        - Currently reading Griffith's classic <a href= "https://en.wikipedia.org/wiki/Introduction_to_Quantum_Mechanics_(book)">Introduction</a>.
 
     - title: Algorithms and Data Structures
       items:
