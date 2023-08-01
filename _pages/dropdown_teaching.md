@@ -1,13 +1,13 @@
 ---
 layout: page
-title: submenus
+title: Teaching
 nav: true
 nav_order: 6
 dropdown: true
 children: 
-    - title: university courses
+    - title: University Courses
       permalink: /teaching/
     - title: divider
-    - title: bijles
-      permalink: /projects/
+    - title: Bijles (NL)
+      permalink: /bijles/
 ---

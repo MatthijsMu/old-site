@@ -17,9 +17,7 @@
       description: 
         - title: Progress
           contents:
-          - 1st year
-          - 141 EC
-          - GPA 9.5/10
+          - "1st year: 141 EC, GPA 9.5/10"
         - title: Radboud Honours Programme for Science
           contents:
             - Writing an interdisciplinary research proposal with students from other studies in the faculty.
@@ -31,15 +29,13 @@
       description: 
         - title: Progress
           contents:
-          - 1st year
-          - 141 EC
-          - GPA 9.5/10
+          - "1st year: 141 EC, GPA 9.5/10"
 
     - title: VWO (Dutch Pre-University Education)
       institution: Mill-Hill College, Goirle
       year: 2016-2022
       description:
-        - Highest level of dutch secondary education, prior to entering university.
+        - Highest level of Dutch secondary education, prior to entering university.
         - Specialisation in Nature and Technology / Nature and Health
         - GPA 9.5/10 (summa cum laude)
         - Courses in Physics (10) / Chemistry (10) / Biology (9) / Mathematics B (10) / Mathematics D (10) / Latin (10) / Spanish (10) / English (9) / Dutch (8)
@@ -101,8 +97,9 @@
       description: 1st place (34 schools, 2431 exam candidates). Represented Mill-Hill College with my research project on Reinforcement Learning. Received for this a prize of €1200,-
 
     - title: Mención Honorı́fica
+      year: July 2022
       institution: La Consejerı́a de Educación de la Embajada de España en Paı́ses Bajos
-      year: A honorable mention for obtaining grade 9.6 on the central exam (CSE) for Spanish Language and Culture.
+      description: A honorable mention for obtaining grade 9.6 on the central exam (CSE) for Spanish Language and Culture.
 
     - title: W4-Kangaroo Mathematics Contest
       year: March 2019

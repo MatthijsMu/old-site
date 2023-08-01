@@ -1,11 +1,20 @@
 ---
 layout: page
 permalink: /repositories/
-title: repositories
-description: Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.
+title: Repositories
+description: >
+  The Github/Gitlab repositories containing code for my open-source projects.
+
+
 nav: false
 # nav_order: 3
 ---
+
+<!---
+Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.
+-->
+
+
 <!--- don't need this:
 
 ## GitHub users

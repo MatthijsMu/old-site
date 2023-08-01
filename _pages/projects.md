@@ -6,7 +6,8 @@ description: A growing collection of your cool projects.
 nav: false
 # nav_order: 2
 display_categories: [coursework, personal]
-horizontal: true #? what does this do?
+horizontal: true # this changes the layout of projects within categories: either horizontally in one row or as blocks spread across multiple rows
+
 ---
 
 <!-- pages/projects.md -->

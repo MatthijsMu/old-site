@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /bijles/
-title: bijles
+title: Bijles (NL)
 description: >
     Ik begrijp hoe uitdagend het kan zijn om sommige vakken onder de knie te krijgen. Als toegewijde tutor wil ik je graag helpen je zelfvertrouwen te vergroten en je
     academische doelen te bereiken. Samen zullen we stap voor stap werken aan het begrijpen van de lesstof en je studievaardigheden versterken. Aarzel niet om contact  met me op te nemen voor een persoonlijke en ondersteunende bijleservaring.

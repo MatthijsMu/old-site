@@ -2,7 +2,7 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Matthijs Muis # the website title (if blank, full name will be used instead)
+title: blank # the website title (if blank, full name will be used instead)
 first_name: Matthijs
 middle_name:
 last_name: Muis
@@ -125,8 +125,8 @@ bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Byte-Size Ideas # blog_name will be displayed in your blog page
-blog_nav_title: blog # your blog must have a title for it to be displayed in the nav bar
+blog_name: Mathematics and Computer Science Blog # blog_name will be displayed in your blog page
+blog_nav_title: false # your blog must have a title for it to be displayed in the nav bar
 blog_description: A bit of theory on everything.
 permalink: /blog/:year/:title/
 
