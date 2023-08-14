@@ -1,9 +1,9 @@
 ---
 layout: post
 title: The Metropolis-Hastings Algorithm
-date: 2023-08-04 15:09:00
+date: 2023-08-04 15:09:01
 description: An explanation of the Metropolis-Hastings algorithm with an example application.
-tags: statistics, algorithms, mcmc, markov processes
+tags: statistics, algorithms, mcmc, markov-processes
 categories: statistics, algorithms
 featured: true
 ---
