@@ -3,14 +3,16 @@ layout: post
 title: Set Theory 1
 date: 2023-08-04 15:09:01
 description: The general logical framework in which we will discuss sets, and the first axioms of set theory.
-tags: set-theory
-categories: set-theory, 
+tags: set-theory, axioms, empty-set
+categories: set-theory
 featured: true
 ---
 
 The notion of a set is something very intuitive that we use everyday. Yet a rigorous definition of a set is, when you first try this by yourself, quite difficult to give. There seems to be nothing more elementary to describe a set with. Is it a "list" of its elements? Then you probably wonder how to define a list first, in order to avoid vagueness. Another question that arises is: can lists be infinite? We will later see that there are sets that contain so many elements that you cannot enumerate them as a list!
 
-## 
+---
+
+##### Preliminaries: some naive logic
 
 Our general approach is to use axioms, which are logical sentences according to which any set behaves. Logical sentences are defined from *well-formed logical formulas* or *wff*'s. A *wff* is nothing more than a string of logical symbols, which in our case will be *Exists*, *For all*, *not*, *then*, *iff.*, *and*, *or*, together with variables we will often denote with lowercase letters, such as $$x$$, or constants (which are known objects with a name) or abstract sentences often denoted by an uppercase letter such as $$ P $$ or $$ Q $$. We will also introduce the symbol $$=$$. Finally, there are *relation* and *function* symbols that are specific to the theory, or define symbols from others using sentences. These are, among others $$ \in $$,$$ \subset$$,$$ \cap$$, $$\cup$$. 
 
@@ -76,6 +78,9 @@ It fails due to Russel's paradox:
 
 The axiom of comprehension leads to contradictions so we do not want to use it to do set theory. This is because logically, anything follows from a contradiction, so we get a garbage theory with which we can prove anything we want and don't want about sets. This is why we need 9 or 8 (or 7, depending on whether you like the axiom of choice) more axioms to define what sets can actually exist.
 
+
+---
+
 ##### Axiom 2: Empty set
 
 First, we postulate that there is a set which has no members, i.e. 
@@ -86,8 +91,82 @@ Say that $$ B $$ is a set that satisfies this sentence for $$ x $$. By extension
 
 Having given $$ \emptyset $$ as a basis from which to build new sets, we next consider axioms that state the existence of new sets based on existent sets. These define us rules to create new sets from existent sets.
 
+
+---
+
 ##### Axiom 3: Pairing
 
 > *For all* $$ x $$ *For all* $$ y $$ *Exists* $$ p $$ (*For all* z ($$ z \in p $$) *iff.* z ($$ z = x $$) *or* ($$ z = y $$))
 
-This basically states that if $$ x $$ and $$ y $$ are sets, then there must also be a set $$ p $$ which has exactly $$ x $$ and $$ y $$ as its elements. By Extensionality, such a $$ p $$ is a uniquely defined set. That is why the notation $$ \{ x, y \} $$ makes sense: the elements $$ x $$ and $$ y $$ uniquely define $$ p $$. Note however that order doesn't matter: $$\{ x, y \} = \{ y, x \} $$. In general, we can define finite sets with "curly braces"-notation by just denoting their elements. Also note that if we apply the pairing axiom to $$ x $$ and $$ x $$, we arrive at the existence of $$ \{ x, x \} $$, but this is just $$ \{x\}$$ because a set is uniquely defined by which elements it contains.
+This basically states that if $$ x $$ and $$ y $$ are sets, then there must also be a set $$ p $$ which has exactly $$ x $$ and $$ y $$ as its elements. By Extensionality, such a $$ p $$ is a uniquely defined set. That is why the notation $$ \{ x, y \} $$ makes sense: the elements $$ x $$ and $$ y $$ uniquely define $$ p $$. Note that order doesn't matter: $$\{ x, y \} = \{ y, x \} $$, since they have the same elements. In general, we can define *finite* sets with "curly braces"-notation by just denoting their elements. Also note that if we apply the pairing axiom to $$ x $$ and $$ x $$, we arrive at the existence of $$ \{ x, x \} $$, but this is just $$ \{x\}$$ because a set is uniquely defined by which elements it contains, and $$ y \in \{x, x \} $$ *iff.* $$ y = x $$, which is "*iff.* $$ y \in \{x\} $$.
+
+The pairing axiom enables us to make a new set apart from $$ \emptyset $$ , namely $$ \{ \emptyset \}$$. This set is clearly different from $$\emptyset $$, because it has an element while $$ \emptyset $$ does not.
+
+Pairing also enables us to define *ordered pairs*. For two sets $$ a $$, $$ b $$, we define the ordered pair $$ (a, b) $$ to be $$ \{\{a\},\{a,b\}\} $$. The definition enforces an "order" on the elements of the pair, in the sense that:
+
+> **Theorem** $$(a,b) = (c,d)$$ *iff.* ($$a = c$$ *and* $$ b = d $$).
+
+> **Proof** We distinguish two cases:
+> - If $$ a = b $$, we have by definition $$(a,b) = \{\{a\},\{a,a\}\} = \{\{a\},\{a\}\} = \{\{a\}\}$$. If $$ c\not = d $$, then $$(c,d)$$ will contain two distinct elements, which leads to a contradiction by Extensionality. Hence $$ c = d$$ and we have $$ \{\{c\}\} = (c,d) = (a,b) = \{\{a\}\}$$. Then by Extensionality, $$\{a\} = \{c\}$$. Applying Extensionality again, $$a = c$$.
+> - If $$ a \not = b $$, we observe that $$\{a\}$$ and $$\{a,b\}$$ must be distinct so by applying Extensionality to $$(a,b) = (c,d)$$, we conclude that $$\{c\}$$ and $$\{c,d\}$$ must be distinct as well, and we either have:
+>   - $$\{a\} = \{c,d\}$$ and $$\{a,b\} = \{c\}$$, which is clearly not possible as $$c \not = d $$ so $$\{c,d\}$$ is not a singleton set while $$\{a\}$$ is.
+>   - Thus, the second case, $$\{a\} = \{c\}$$ and $$\{a,b\} = \{c,d\}$$, must hold. Then by applying Extensionality to the first equality, we conclude $$a = c$$. Since $$ b \not = a = c$$, the second equality leads to $$b = d $$ necessarily.
+
+
+---
+
+##### Axiom 4: Union
+
+> *For all* $$ x $$ *Exists* $$ y $$ *For all* $$ z $$ ($$ z \in y $$ *iff.* (*Exists* $$ s $$ ($$ s \in x $$ *and* $$ z \in s $$)))
+
+The axiom says that if $$ x $$ is a set then there is a set $$ y $$ containing exactly the elements of the elements of $$ x $$. Since the formula uniquely specifies the elements of $$ y $$, we see that such a $$ y $$ is even unique. So let's give it a name: $$ \cup x \equiv y $$. We call $$\cup x$$ the *union* of $$ x $$.
+
+Other notations that are used sometimes include $$\cup_{s\in x} s $$, and for two sets $$A$$ and $$B$$ we can take the union of their unordered pair, often denoted $$A \cup B \equiv \cup \{A,B\}$$
+
+---
+
+
+##### Axiom 5: Power set
+
+This assures the existence of a set that contains all subsets of a set, the so-called *power set*.
+
+> *For all* $$ x $$ *Exists* $$ y $$ *For all* $$ z $$ ($$ z \in y $$ *iff.* (*For all* $$ s $$ ($$ s \in z $$ *then* $$ s \in x $$)))
+
+We will define the relation symbol $$ \subset $$ with the following wff:
+
+> $$ x \subset y $$ *iff.* (*For all* $$ s $$ ($$ s \in x $$ *then* $$ s \in y $$))
+
+Then, the Power set axiom reads:
+
+> *For all* $$ x $$ *Exists* $$ y $$ *For all* $$ z $$ ($$ z \in y $$ *iff.* ($$ z \subset y $$))
+
+The power set of $$ X $$ is unique by Extensionality; we denote it $$ P(X) $$.
+
+
+---
+
+##### Axiom 6: Separation
+
+For every wff. $$ \varphi $$ which has the free variable $$ x $$, and all other variables in $$\phi$$ are bound, we have the following axiom:
+
+> *Exists* y *For all* $$ x $$ ($$ x \in y$$ *iff.* $$\varphi$$)
+
+Separation is not really one axiom if you consider it in first order logic. Rather, it is a whole family (i.e. informal set in our meta-language) which has an axiom for every instance of a wff. $$\varphi$$. This is why it is often called an *axiom schema*: for every wff. $$\varphi$$, we could say that we can substitute $$\varphi$$ in the schema.
+
+So in fact, I was lying when I said that there are only 8 or 9 or so axioms for set theory: it is in fact an infinite theory, albeit countable in formal logic (since we can recursively enumerate every wff in our logical language).
+
+The set created by applying this axiom to a set $$X$$ and a wff $$\varphi$$ is often denoted $$\{x \in X: \varphi \}$$.
+
+An important application of Separation is that we can define the *intersection* $$\cap x $$ of a set $$ x $$, by taking the instance of this axiom schema for $$\varphi \equiv $$ *For all* $$ s \in P(X) \ x \in s$$. This means that we can define, for arbitrary $$ X $$, a set of elements of elements of $$ X $$ such that its elements occur in *every* element of $$ X $$. This is our beloved $$\cap X$$, or $$\cap_{x\in X} x$$, or $$A\cap B \equiv \cap \{A,B\}$$ for a pair of sets.
+
+You may have noticed that we have just introduced another shorthand notation, "*For all* $$ a \in A*$$". In general, we can define shorthand notation of quantification over a restricted domain $$A$$ as:
+
+> (*For all* $$ a\in A \ \varphi$$ ) *iff.* (*For all* $$ a$$ ( $$ a \in A$$ *then* $$\varphi$$))
+
+> (*Exists* $$ a\in A \ \varphi$$ ) *iff.* (*Exists* $$ a$$ ( $$ a \in A$$ *and* $$\varphi$$))
+
+Another application of Separation is the construction of the *cartesian product* of two sets $$ A $$ and $$ B $$, denoted $$A \times B$$ and defined as $$\{ x\in P(P(A\cup B))$$ :  *Exists* $$ a\in A$$ *Exists* $$b\in B \ x = \{\{a\},\{a,b\}\} \ \}$$. In simpler terms it is exactly the set of all ordered pairs $$(a,b)$$ where $$a\in A$$ and $$b\in B$$.
+
+---
+
+With these first axioms and the definition of the cartesian product established, the next blog post will look into relations, especially *order relations*, *equivalence relations* and *functions*.

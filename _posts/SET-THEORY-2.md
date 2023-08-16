@@ -1,0 +1,117 @@
+---
+layout: post
+title: Set Theory 2
+date: 2023-08-15 15:09:01
+description: Discusses relations, in particular orders, equivalences.
+tags: set-theory, relations, pre-order, partial-order, equivalences
+categories: set-theory
+featured: true
+---
+
+In the last post, we discussed the first 6 axioms of set theory. *Extensionality* defined when two sets are equal: in particular, it expressed $$ a = b$$ in a sentence involving only the elementhood relation symbol $$\in$$. The *Emtpy set* axiom stated the existence of a set without members. *Pairing*, *Union*, *Power set* and *Separation* provided ways of constructing new sets from old. We were able to prove some basic theorems and define some basic new sets, such as the *cartesian product* $$A\times B$$ of two sets $$A, B$$. 
+
+We will now define relations and study relations with certain properties. These are *order* relations, *equivalence* relations and *functions*.
+
+---
+###### Relations
+
+
+> **Definition** A relation on $$A\times B$$ is a subset $$R \subset A\times B$$.
+
+> **Definition** A relation on $$A\times A$$ is also called a relation on $$A $$.
+
+By convention, we denote $$a R b$$ if $$(a,b) \in R$$. Trivial example relations on $$ A $$ are:
+
+> $$I_A \equiv \{(a,b)\in A : a = b \}$$
+
+> $$ \subset_A \equiv \{(a,b)\in P(A)\times P(A) : a \subset b \}$$
+
+---
+
+###### Pre-orders, partial orders, total orders
+
+A relation $$R$$ on $$A$$ can satisfy various interesting axioms:
+
+> **Transitivity** *For all* $$a\in A, b \in A, c \in A$$ ($$aRb$$ *and* $$bRc$$) *then* $$aRc$$
+
+> **Reflexivity**  *For all* $$a \in A$$ $$aRa$$
+
+A pre-order is any relation that satisfies Transitivity and Reflexivity. A *partial* order is a pre-order that also satisfies *Antisymmetry*:
+
+> **Antisymmetry** *For all* $$a\in A, b\in B$$ ($$aRb$$ *and* $$bRa$$) *then* $$a=b$$
+
+The wording "Antisymmetry" is very well-chosen here. Because we see exactly that there is no "symmetry" in $$R$$ between any two different elements a and b, that is, we cannot exchange $$a$$ with $$b$$ and get another element $$(b,a)\in R$$.
+
+An example of a partial order is that of the natural order $$\leq$$ on the real numbers. Note that this order is however also *total*.
+
+> **Totality** *For all* $$a\in A, b\in B$$ ($$aRb$$ *or* $$bRa$$)
+
+A partial order is exactly *partial* in the sense that Totality need not hold. An example is the relation $$\subset_A$$ for any $$A$$ that is not $$\emptyset$$ or a singleton set. In that case, we can find an $$a\in A$$ and a $$b\in A$$ such that $$a\not = b$$, and we clearly see that $$A \backslash \{a\} \not \subset_A A \backslash \{b\}$$ but also $$A \backslash \{b\} \not \subset_A A \backslash \{a\}$$, so clearly the sets are incomparable.
+
+---
+
+##### Equivalences, orbits, quotient sets, partitions.
+
+The pre-order can also be built out into a completely different direction, namely by adding an axiom that says exactly the opposite of *Antisymmetry*: we don't *exclude* the possibility that both $$aRb$$ and $$bRa$$ hold simultaneously, but *require* it. Not surprisingly, we call this axiom *symmetry*.
+
+> **Symmetry (1)** *For all* $$a \in A, b\in B$$ ($$aRb$$ *then* $$bRa$$)
+
+Because we can exchange $$a$$ and $$b$$, the *then* can equally well be replaced by an *iff.*.
+
+> **Symmetry (2)** *For all* $$a \in A, b\in B$$ ($$aRb$$ *iff.* $$bRa$$)
+
+What version of the axiom we use depends on what we find convenient. A *then* statement is often a bit shorter to prove, while assuming an *iff.* statement usually makes the proof of some other property a bit shorter.
+
+Assuming a set $$X$$ with equivalence relation $$R$$, we can define for any $$x \in X$$ the *orbit* $$[x]$$.
+
+> **Orbit** Also called the *equivalence class* of the element $$x$$. It is denoted and defined $$ [x] \equiv \{y\in X : xRy \}$$
+
+An interesting property of orbits is that $$y\in [x]$$, iff. ($$y\in X$$ and $$xRy$$), which is by symmetry iff there is a set $$[y]$$, $$x\in X$$ and $$yRx$$), so iff $$x \in [y]$$. In particular, we have the following lemma:
+
+>**Lemma** $$[x] = [y]$$ *iff.* $$xRy$$
+
+>**Proof** We have to prove both directions:
+> - Suppose $$[x] = [y]$$. Then since $$xRx$$ by reflexivity, $$x\in [x]$$, so $$x\in [y]$$ by Extensionality. It follows by definition of $$[y]$$ (and some applications of symmetry) that $$xRy$$
+> - Suppose $$xRy$$. By Symmetry, we also have $$yRx$$. hence if $$z\in [x]$$, then $$zRx$$, so by Transitivity $$zRy$$, so by definition $$z\in [y]$$. To show that every $$z\in [y]$$ is also in $$[x]$$, we do exactly the same. Hence by Extensionality $$[x]=[y]$$.
+
+We can use this to show that orbits either coincide or are disjoint:
+
+>**Lemma** Either one of the following two alternatives holds:
+> - $$[x]=[y]$$
+> - $$[x]\cap [y] = \emptyset$$
+
+>**Proof** We either have $$xRy$$ or $$x\not R y $$.
+> - If $$xRy$$ we conclude by the preceding lemma that $$[x]=[y]$$, in which case [x]\cap [y] are clearly not disjoint because they are *non-empty* (this is important!) and equal.
+> - If $$x\not R y$$, we cannot have a $$z \in [x]\cap [y]$$, since if such a $$z$$ were to exist, we would have $$xRz$$ and $$zRy$$, so transitivity would give us that $$xRy$$, a contradiction.
+
+From the orbits, we define the *quotient set* $$X/R$$.
+
+> **Quotient set** This set is denoted $$X/R \equiv \{B \in P(X) : $$ *Exists* $$x \in X \ [x]=B \}$$
+
+By the preceding lemma and some additional bookkeeping, we can see that quotient sets are all *partitions*.
+
+> **Partition** A *partition* of a set $$X$$ is a set $$\pi \subset P(X)$$ satisfying:
+> - *Disjointness of Parts* $$B, C \in \pi$$ with $$B \not = C$$ are disjoint
+> - *Coverage* $$\cup \pi = X$$
+> - *Non-emptiness of Parts* $$B \in \pi$$ *then* $$B \not = \emptyset$$, or equivalently $$\emptyset \not \in \pi$$
+
+Let's prove this:
+
+> **Theorem** If $$R$$ is an equivalence relation on $$X$$ then $$X/R$$ is a partition of $$X$$.
+
+> **Proof** 
+> - Let $$B, C$$ be in $$X/R$$. These are,  by definition of $$X/R$$, both equivalence classes of one or another element of $$X$$, say $$B = [x]$$ and $$C = [y]$$ with $$x\in X,y\in X$$. We assume $$C \not = B$$, so that $$[x]\not = [y]$$ and hence they must be disjoint.
+> - let $$x\in X$$, then $$x\in [x]$$ since $$xRx$$ (Reflexivity), and hence $$x$$ is an element of $$[x]$$ which is an element of $$X/R$$. So $$x \in \cup(X/R)$$ for all $$x\in X$$, but since $$X/R \subset P(X)$$ we also have $$\cup (X/R) \subset X$$, hence \cup (X/R) = X$$.
+> - Any $$B \in X/R$$ is an equivalence class of some $$x\in X$$, hence $$x\in B$$, so $$\emptyset \not \in \pi$$.
+
+Conversely, every partition $$\pi$$ of $$X$$ leads to an equivalence relation on $$X$$, by setting $$xRy$$ for $$x\in X, y\in X$$ only if there exists a $$B\in \pi$$ with $$x\in B$$ and $$y\in B$$.
+
+> **Theorem** This makes $$R$$ and equivalence relation on $$X$$.
+
+> **Proof** 
+> - *Symmetry*: suppose $$xRy$$. Then there is a $$B\in pi$$ such that $$x$$ and $$y$$ are element of that set. So we might as well say that "there is a $$B\in pi$$ such that $$y$$ and $$x$$ are element of that set", which defines $$yRx$$.
+> - *Transitivity*: suppose $$xRy$$ and $$yRz$$. Then there is a $$B\in \pi$$ with $$x\in B$$ and $$y\in B$$, and there is also a $$C \in \pi $$ with $$y\in C $$ and $$z\in C$$. But then $$B\cap C \not = \emptyset$$ since $$z$$ is in this intersection, and so $$B = C$$ by Disjointness of Parts. This also means that there is a $$C\in \pi$$ such that $$x\in C $$ and $$ z \in C$$, which leads to $$xRz$$.
+> - *Reflexivity*: This is the simplest part. By Coverage, every $$x\in X$$ is contained in $$\cup \pi$$, so take $$x\in X$$, then there is some $$B\in \pi$$ such that $$x\in B$$, and hence both $$x$$ and $$x$$ are in some $$B\in \pi$$. This defines $$xRx$$.
+
+Using these constructions, we can even show that there is a bijective correspondence between the set of all equivalence relations on $$ X$$ and the set of all partitions of $$X$$. But we have not discussed bijections, let alone functions yet.
+
