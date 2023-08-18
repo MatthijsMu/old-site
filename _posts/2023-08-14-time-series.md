@@ -3,8 +3,7 @@ layout: post
 title: Learning Time Series Modelling in Stockholm.
 date: 2023-08-15 15:09:01
 description: I found some interesting book in the library and I want to tell you about it.
-tags: time-series
-categories: time, 
+categories: statistics
 featured: true
 ---
 
