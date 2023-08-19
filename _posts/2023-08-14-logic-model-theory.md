@@ -2,7 +2,7 @@
 layout: post
 title: logic and models
 date: 2023-08-04 15:09:01
-description: Something about logic and models for logics
+description: Something about logic and models for logics (Unfinished)
 categories: logic
 featured: true
 ---
@@ -199,6 +199,6 @@ A well-order is a set $$W$$ with an order relation $$\leq$$ on it such that for 
 
 We say that $$T\models \varphi$$ for $$T$$ a $$L$$-theory and $$\varphi$$ a $$L$$-sentence, if for every model $$M$$ that satisfies $$T$$'s axioms, we have that $$M\models \varphi$$.
 
-Many frameworks are used to *formally* prove logical sentences. For such a framework to be acceptable, we want it to be able to be able to generate a formal proof from $$T$$ for all $$\varphi$$ such that $$T\models\varphi$$, and vice versa we want it to not be stronger than that, that is, if $$T\proves \varphi$$ (this is the notation we will use for "there exists a proof for $$\varphi$$ from assumptions in $$T$$") then $$T\models\varphi$$.
+Many frameworks are used to *formally* prove logical sentences. For such a framework to be acceptable, we want it to be able to be able to generate a formal proof from $$T$$ for all $$\varphi$$ such that $$T\models\varphi$$ (completeness), and vice versa we want it to not be stronger than that, that is, if $$T\proves \varphi$$ (this is the notation we will use for "there exists a proof for $$\varphi$$ from assumptions in $$T$$") then $$T\models\varphi$$ (soundness).
 
-
+(Unfinished, see Sets, Models, Proofs, chapter 3 if you want to know more)

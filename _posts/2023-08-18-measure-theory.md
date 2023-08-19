@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Numbers 1
+title: Measure Theory
 date: 2023-08-15 15:09:01
 description: Discusses relations, in particular orders, equivalences and functions.
 featured: true

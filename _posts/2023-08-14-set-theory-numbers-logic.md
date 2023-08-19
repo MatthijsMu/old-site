@@ -7,6 +7,11 @@ categories: set-theory
 featured: true
 ---
 
+**Update: I have decided to discontinue the series on Set Theory, Numbers and Logic. In particular, I left points 5-11 of the below outline unfinished. The reason for this is that I am currently following further advanced courses and would like to continue blogging about those. Right now, I feel that the rigorous approach that I have been trying to enforce while writing my blogs has deprived them from interest. I would like to write things more summarizingly sometimes, but that makes me wonder what the actual goal of these posts is in the first place. I did not want to develop a 6 EC course within a blog series, but the material that I originally planned to discuss is taught during two 6 EC courses at my University, and only now I realize that this also means a blog on the subjects would become very lengthy.**
+
+**I think that developing all theory step-by-step such as taught in a course may be a better fit for textbooks than for blog posts anyway. I want to keep you, the reader, interested and excited about mathematics and I feel that the way I have been writing blog posts so far is a very different approach: the blogs are long, wordy and bureaucratic. Which is perfect if you dive into a course with zero knowledge on the subject and want to learn everything step-by-step. But this has never been the aim of my blog, honestly.**
+
+
 ### An Overview of the blogs on Set Theory, Numbers and Logic
 
 As a first subject to write about in my blog, I chose to do a series on set theory, logic and models for number systems. These are based on courses I followed at Radboud University during my pre-university studies (Introduction to Mathematics and Numbers) and first year (though Mathematical Logic is actually a 2nd year course). My idea is to go from sets to numbers to logic and then to sets again. In particular:
