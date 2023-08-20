@@ -201,4 +201,38 @@ We say that $$T\models \varphi$$ for $$T$$ a $$L$$-theory and $$\varphi$$ a $$L$
 
 Many frameworks are used to *formally* prove logical sentences. For such a framework to be acceptable, we want it to be able to be able to generate a formal proof from $$T$$ for all $$\varphi$$ such that $$T\models\varphi$$ (completeness), and vice versa we want it to not be stronger than that, that is, if $$T\proves \varphi$$ (this is the notation we will use for "there exists a proof for $$\varphi$$ from assumptions in $$T$$") then $$T\models\varphi$$ (soundness).
 
-(Unfinished, see Sets, Models, Proofs, chapter 3 if you want to know more)
+The set of proofs is defined as the smallest subset of the set of all *marked trees* over $$F$$, that satisfies certain closure properties. I will now explain what marked trees are in this context (if you study cs/discrete maths, you are probably aware that there are 1001 definitions for trees and all sorts of variations) and what the closure properties are.
+
+> **Tree** A (rooted) tree over a set $$X$$ is a finite subset $$Y\subset X$$ that is:
+> - partially ordered, 
+> - and has a least element,
+> - and for any two $$x,y\in Y$$ then $$\{x,y\}$$ has an upper bound iff. $$x\leq y$$ or $$y\leq x$$.
+
+We can display a tree as its Hasse diagram. You can then see that the third rule assures that there is no way two "upward branches" can meet again when we go up the diagram, because 
+
+The definition given in *Sets, Models and Proofs* is somewhat different, though I believe that because $$Y$$ is finite, you might be able to prove that the two definitions are equivalent:
+
+**Tree (Sets, Models, Proofs)** A tree over a set $$X$$ is a finite subset $$Y\subset X$$ that is: 
+> - partially ordered,
+> - for any $$x\in Y$$ the set $$\downarrow (x) = \{y\in Y:y\leq x\}$$ is well-ordered.
+
+The *maximal elements* $$L\subset Y$$ of the tree are called *leaves*, they will act as our assumptions. Important is that assumptions can be *marked*, so we need to extend our trees to include a *marking function*.
+
+> **Marked Tree** is a tree with a function $$f:L\rightarrow \{0,1\}$$ or equivalently a set $$L_{marked}\subset L$$.
+
+It is very difficult to get a picture of these abstract definitions in your head. So let me include a picture of a marked tree over $$F$$, some set of abstract formulas. My example also happens to be a proof tree, but I will get back to that later.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/prooftree-example.png" title="proof tree image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+In the example, the bottom layer is the root, and the partial order relation is precisely displayed by having two formulas $$\chi$$ and $$\psi$$ such that $$\chi < \psi$$ and that there is no such $$\xi$$ that $$\chi < \xi < \psi$$ put in the diagram in such a way that $$\psi$$ is on a level immediately above $$\chi$$ and reachable from $$\chi$$ in one step up the tree. Marked leaves are shown as elements [between rectangular brackets]. You should ignore the numbering for now, it is not part of the tree definition in any way.
+
+> **Proof Tree** Given a logical language $$L$$, the set $$\mathcal T$$ of proof trees is the smallest set of marked trees over the set of $$L$$-formulas that satisfies the following closure properties:
+
+ - Actually, you can look up the definition in the freely downloadable book [*Sets, Models and Proofs*](https://www.a-eskwadraat.nl/Onderwijs/Boekweb/Artikel/48/Dictaat/Downloaden). I don't want to literally copy their definition here, that feels too much like plagiarism.
+ - The general idea is that every connective and every quantor has an introduction rule to introduce it into a formula, and an elimination rule to eliminate it from a formula. Then there are assumption trees and finally a valid proof is a proof tree where all assumptions (leaves) except maybe those that occur in the *assumed* theory $$T$$ and/or the formula $$\exists x (x=x)$$ have been marked. 
+
+ Once you have read the above definition in the provided book, you can check for yourself that the example tree I provided earlier is indeed a proof tree. It is a proof, or better, a proof schema (since it is more of a template where $$\varphi$$ is a completely abstract formula) of the *law of excluded third*. Any proof for this law makes use of $$\lnot E$$, and that is also why in *Intuitionistic Logic*, where $$\lnot E$$ is not one of the closure laws for proof trees, the law of excluded third does not hold.
