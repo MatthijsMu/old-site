@@ -3,7 +3,7 @@ layout: post
 title: Multivariate Normal Distribution 
 date: 2023-08-15 15:09:01
 description: Discusses the multivariate normal distribution and some of its abundant applications in statistics or "data science".
-featured: true
+featured: false
 categories: statistics
 ---
 ## Introduction

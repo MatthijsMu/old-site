@@ -3,7 +3,7 @@ layout: post
 title: Set Theory 3 (Unfinished)
 date: 2023-08-15 15:09:01
 description: Discusses functions.
-featured: true
+featured: false
 categories: set-theory
 ---
 

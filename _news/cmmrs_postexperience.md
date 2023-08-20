@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Online!
-date: 2001-12-14t21:59:43.10-05:00
+title: I have attended the CMMRS 2023
+date: 2023-08-14
 inline: false
 related_posts: false
 ---

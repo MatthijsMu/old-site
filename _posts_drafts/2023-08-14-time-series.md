@@ -4,7 +4,7 @@ title: Learning Time Series Modelling in Stockholm.
 date: 2023-08-15 15:09:01
 description: I found some interesting book in the library and I want to tell you about it.
 categories: statistics
-featured: true
+featured: false
 ---
 
 This is a post on me learning time series from the book Time Series Modelling, which I have here in front of me at the Stockholm public library. The book is authored by Andreas Jakobssonn and it is apparently used for a course at Lund University, Sweden. 

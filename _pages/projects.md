@@ -2,11 +2,11 @@
 layout: page
 title: projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: A growing collection of my cool projects.
 nav: false
 # nav_order: 2
 display_categories: [coursework, personal]
-horizontal: true # this changes the layout of projects within categories: either horizontally in one row or as blocks spread across multiple rows
+horizontal: false # this changes the layout of projects within categories: either horizontally in one row or as blocks spread across multiple rows
 
 ---
 

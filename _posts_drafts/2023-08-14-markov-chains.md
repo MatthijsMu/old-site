@@ -4,7 +4,7 @@ title: The Metropolis-Hastings Algorithm
 date: 2023-08-04 15:09:01
 description: An explanation of the Metropolis-Hastings algorithm with an example application.
 categories: statistics
-featured: true
+featured: false
 ---
 
 Some algorithms are named after people with very fancy surnames. Other algorithms have enigmatic acronyms. At the intersect of this set is the *Metropolis-Hastings*  algorithm, which is often classified as an *MCMC method*. The acronym itself expands to *Markov Chain Monte Carlo*. Again, so extra.

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Online!
-date: 2001-12-14t21:59:43.10-05:00
+title: Selected for Cornell, Maryland, Max-Planck Pre-doctoral Research School 2023
+date: 2023-07-01
 inline: false
 related_posts: false
 ---
@@ -11,7 +11,7 @@ The school, aimed at undergraduate and masters students, means a week-long expos
 
 I am excited to meet the fellow attendees, and hope to see many inspiring lectures, have awesome conversations on CS and connect with the inspiring people who expand the frontiers of our current state-of-art. 
 
-I am receiving a travel stipend and fully funded accomodation for the duration of the school from MPI.
+I am receiving a travel stipend and fully funded accomodation for the duration of the school, from MPI.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">

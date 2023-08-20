@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accepted into Radboud University Honours Programme for Science.
-date: 2001-12-14
+title: Accepted for Radboud University Honours Programme for Science.
+date: 2023-08-01
 inline: false
 related_posts: false
 ---

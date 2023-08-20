@@ -1,10 +1,10 @@
 ---
 layout: post
-title: logic and models
-date: 2023-08-04 15:09:01
+title: Logic, Models, Proofs
+date: 2023-08-04
 description: Something about logic and models for logics (Unfinished)
 categories: logic
-featured: true
+featured: false
 ---
 ## Introduction and Motivation
 We will dive into formal first-order logic! 
