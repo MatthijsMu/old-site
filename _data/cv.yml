@@ -48,10 +48,11 @@
       institution: The Cornell, Maryland, Max Planck Pre-doctoral Research School
       year: august 2023
       description:
-        - One of 90 selected participants.
-        - Will engage with state-of-art Computer Science research and emerging trends in the field.
+        - One of 90 selected participants (500+ applications).
+        - Engaged with state-of-art Computer Science research and emerging trends in the field.
         - Meet and collaborate with like-minded students from all over the world.
         - Hosted at Max-Planck Institute for Software Science in Saarbruecken, Germany.
+        - Travel costs and accomodation are funded by MPI.
 
     - title: Pre-University Student
       institution: Radboud Pre-University College of Science
@@ -79,7 +80,10 @@
 - title: Open Source Projects
   type: time_table
   contents:
-    - title: TODO (_data/cv.yml) #TODO
+    - title: TODO
+
+- title: "Programming languages and frameworks I can work with:"
+  description: Git, C++/C, Python, Java, Haskell, MPI, OpenMP, OpenCL, HTML
 
 - title: Honors and Awards
   type: time_table

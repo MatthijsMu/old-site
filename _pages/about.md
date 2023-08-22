@@ -18,11 +18,11 @@ social: true  # includes social icons at the bottom of the page
 ---
 
 ---
-I am BS student in Mathematics and Computer Science at [Radboud University](https://www.ru.nl/en), Nijmegen. My interests are general theoretical computer science, statistics, machine learning, dynamical systems, geometry and algebra. I am currently also studying an [introductory text on quantum mechanics](https://en.wikipedia.org/wiki/Introduction_to_Quantum_Mechanics_(book)).
+I am a BS student in Mathematics and Computer Science at [Radboud University](https://www.ru.nl/en), Nijmegen. My interests are complexity and algorithms, statistics, physics, but I'm also into abstract algebra. Currently, I would like to get involved in research, whether it be theoretical or applied.
 
-Previously, my mathematical interests lead me to participate in the [Dutch Mathematical Olympiad](https://wiskundeolympiade.nl/docenten/info-in-english) (2021) where I placed 16th nationwide. My interest in ML, in particular Reinforcement Learning, led to a high-school project for which I was awarded the first prize in the [OMO-PWS-Contest](https://www.omojaarverslag.nl/verslag2022/f/omoprijzen/omoprijzen-een-bijzondere-motiveringsprijs-voor-leerlingen) (2022).
+Previously, my mathematical interests lead me to participate in the [Dutch Mathematical Olympiad](https://wiskundeolympiade.nl/docenten/info-in-english) (2021) where I placed 16th nationwide. My interest in mathematical modelling led to a project on optimizing blackjack strategies using Reinforcement learning. For this, I was awarded the first prize in the [OMO-PWS-Contest](https://www.omojaarverslag.nl/verslag2022/f/omoprijzen/omoprijzen-een-bijzondere-motiveringsprijs-voor-leerlingen) (2022).
 
-This personal web page features an overview of my academic portfolio: it includes a blog on mathematics, statistics, physics and computer science, as well as projects and papers I wrote for myself or for university courses. 
+This personal web page features an overview of my academic portfolio: it includes a blog on mathematics, statistics, physics and computer science, and in the future also projects and papers I wrote for myself or for university courses. 
 
 
 <!--- I may later include some of the teaching I have done. Its purpose is to create interesting reading for fellow students, while conveniently putting into practice my own knowledge and skills. 
