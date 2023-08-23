@@ -24,7 +24,7 @@ I will base the definitions on [Sets, Models and Proofs](), which was the book s
 
 The book is in my opinion maybe a bit too rigorous, and I will skip this approach. You can probably justify the bracketed notation for yourself and this blog should not become more bureaucratic than a logic blog already is. Instead, I will define terms and wff's in the way most logic textbooks approach it, that is, using some unspoken of brackets in the right place to enforce syntax.
 
-By the way, I assume you are familiar with some set theory. If not, consider [reading my series]({% post_url 2023-08-14-set-theory-1 %})!
+By the way, I assume you are familiar with some set theory.
 
 > **Definition** A *language* $$ L $$ is a triple $$(\text{con}(L),\text{fun}(L),\text{rel}(L)) $$, where:
 > - $$\text{con}(L) $$ is a set of *constants* or *constant symbols*.
