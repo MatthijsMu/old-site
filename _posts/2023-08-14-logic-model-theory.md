@@ -199,7 +199,7 @@ A well-order is a set $$W$$ with an order relation $$\leq$$ on it such that for 
 
 We say that $$T\models \varphi$$ for $$T$$ a $$L$$-theory and $$\varphi$$ a $$L$$-sentence, if for every model $$M$$ that satisfies $$T$$'s axioms, we have that $$M\models \varphi$$.
 
-Many frameworks are used to *formally* prove logical sentences. For such a framework to be acceptable, we want it to be able to be able to generate a formal proof from $$T$$ for all $$\varphi$$ such that $$T\models\varphi$$ (completeness), and vice versa we want it to not be stronger than that, that is, if $$T\proves \varphi$$ (this is the notation we will use for "there exists a proof for $$\varphi$$ from assumptions in $$T$$") then $$T\models\varphi$$ (soundness).
+Many frameworks are used to *formally* prove logical sentences. For such a framework to be acceptable, we want it to be able to be able to generate a formal proof from $$T$$ for all $$\varphi$$ such that $$T\models\varphi$$ (completeness), and vice versa we want it to not be stronger than that, that is, if $$T\vdash \varphi$$ (this is the notation we will use for "there exists a proof for $$\varphi$$ from assumptions in $$T$$") then $$T\models\varphi$$ (soundness).
 
 The set of proofs is defined as the smallest subset of the set of all *marked trees* over $$F$$, that satisfies certain closure properties. I will now explain what marked trees are in this context (if you study cs/discrete maths, you are probably aware that there are 1001 definitions for trees and all sorts of variations) and what the closure properties are.
 
