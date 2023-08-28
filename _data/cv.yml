@@ -87,10 +87,11 @@
 - title: Open Source Projects
   type: list
   contents:
-    - Processor Practical 
+    - <a href = "https://github.com/MatthijsMu/processor_practical"> Processor Practical </a>
 
 - title: "Programming languages and frameworks I can work with:"
-  items: 
+  type: list
+  contents: 
     - Git, 
     - C++/C, Java, 
     - Python, 
