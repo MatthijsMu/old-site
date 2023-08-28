@@ -85,9 +85,10 @@
 
 
 - title: Open Source Projects
-  type: time_table
+  type: list
   contents:
-    - title: TODO
+    - title: Processor Practical
+      description: See my github repositories page.
 
 - title: "Programming languages and frameworks I can work with:"
   items: 
