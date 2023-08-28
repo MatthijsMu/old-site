@@ -90,7 +90,13 @@
     - title: TODO
 
 - title: "Programming languages and frameworks I can work with:"
-  description: Git, C++/C, Python, Java, Haskell, MPI, OpenMP, OpenCL, HTML
+  items: 
+    - Git, 
+    - C++/C, Java, 
+    - Python, 
+    - Haskell, 
+    - MPI, OpenMP, OpenCL, 
+    - HTML
 
 - title: Honors and Awards
   type: time_table
@@ -148,4 +154,4 @@
   type: list
   contents:
     - <u>Hobbies:</u> Chess, Watercolour, Drawing in general.
-    - <u>Reading:</u>
+    - <u>Reading:</u> Tolstoj, Gogol, Murakami, Tolkien, John Flanagan
