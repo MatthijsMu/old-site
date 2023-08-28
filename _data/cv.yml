@@ -87,8 +87,7 @@
 - title: Open Source Projects
   type: list
   contents:
-    - title: Processor Practical
-      description: See my github repositories page.
+    - Processor Practical 
 
 - title: "Programming languages and frameworks I can work with:"
   items: 
