@@ -121,7 +121,7 @@ Then, we add in $$(\mathbb E X) = (\frac q p)^2$$. That will finally give us:
 
 $$\text{var}[X] = \mathbb [X^2] - (\mathbb X)^2 = \frac {qp} {p^2} + \frac {q^2} {p^2} = \frac{p - p^2 + p^2 - 2p + 1} {p^2} = \frac q {p^2}$$
 
-## Inverse Binomial distribution
+## Inverse Binomial, or Polya distribution
 
 We now want to model a sequence of experiments $$Y_1, Y_2, ...$$ and the distribution of the number $$T_n$$ at which the $$n$$th success occurs, in other words $$T_n : = \min \{ k \in \mathbb N \mid \sum_{i = 1} ^k Y_i = n\}$$
 Note that the set might not have a minimum in the event that all $$Y_i$$ are $$ 0$$ before $$n$$ successes are reached. This was also the case for the geometric distribution. However, $$T_n$$ is non-defective: this is
@@ -139,4 +139,21 @@ Lovely little derivation. And we can conclude that the support of $$T_n$$ is ind
 
 To derive the PMF, we simply note that if we set $$Z_i = \sum_{j = 1} ^i Y_j$$, then $$Z_i \sim \text{bin}(i,p)$$, and $$Z_i$$ and $$Y_{i+1}$$ are independent, so that:
 
-$$f(x) = \mathbb P [Y_x = 1, Z_{x-1} = n-1] = \mathbb P [Y_x = 1]\mathbb P[ Z_{x-1} = n-1] = p \cdot \binom {x-1}
+$$f(x) = \mathbb P [Y_x = 1, Z_{x-1} = n-1] = \mathbb P [Y_x = 1]\mathbb P[ Z_{x-1} = n-1] = p \cdot \binom {x-1} {n -1} p^{x-1} q^{x-1 - (n-1)} = \binom {x-1} {n -1} p^xq^{x-n}$$
+
+To derive the MGF, I will try another good trick: We can argue that the number of experiments needed for a next success, $$\{T_k - T_{k-1}\}_{1\leq k \leq n$$, is an independent set of i.i.d. $$\text{geom}(p)$$ r.v.'s. In that case, if we put $$S_k := T_k - T{k-1}$$ for $$1 \leq k \leq n$$ (Yes, I see you, but we can simply define $$T_0 \equiv 0$$), we get:
+
+$$M_{T_n} = M_{S_1}(t)\cdot ... \cdot M_{S_n}(t) = (\frac p {1 - qe^t})^n$$
+
+And from this MGF we can again derive the first moment:
+
+$$\mathbb E T = M'_{T_n}(0) = \frac d {dt} p^n (1 - qe^t)^{-n} = (-n)(-q)p^n(1-q)^{-n-1} = nqp^{-1} = n \mathbb E S_i$$
+
+But on the variance we go for the easy way, because the expectation of a sum of independent variables is the sum of the expectations:
+
+$$\text{var}[T_n] = \sum_{i=1}^n \text{var}[S_i] = n p^{-2}q
+
+## Poisson distribution
+
+What if we would consider a sequence of binomial distributions $$(\text{bin}(n, p_n))_{n=0}^\infty$$ such that $$n\cdot p_n \rightarrow \lambda$$ as $$n\rightarrow \infty$$? You already know the answer: Poisson!
+I want to use some space to do a decent derivation. 
