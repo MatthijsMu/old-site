@@ -88,15 +88,16 @@
   type: list
   contents:
     - <a href = "https://github.com/MatthijsMu/processor_practical"> Processor Practical </a>
+    - <a href = "https://github.com/MatthijsMu/statistiek-eindopdracht"> Regression Analysis Practical (in Dutch) </a>
 
 - title: "Programming languages and frameworks I can work with:"
   type: list
   contents: 
-    - Git, 
-    - C++/C, Java, 
-    - Python, 
-    - Haskell, 
-    - MPI, OpenMP, OpenCL, 
+    - Git
+    - C++/C, Java
+    - Python
+    - Haskell 
+    - MPI, OpenMP, OpenCL 
     - HTML
 
 - title: Honors and Awards
