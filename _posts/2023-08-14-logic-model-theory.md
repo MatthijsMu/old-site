@@ -5,6 +5,8 @@ date: 2023-08-04
 description: Something about logic and models for logics (Unfinished)
 categories: logic
 featured: false
+toc: 
+  sidebar: right
 ---
 ## Introduction and Motivation
 We will dive into formal first-order logic! 
