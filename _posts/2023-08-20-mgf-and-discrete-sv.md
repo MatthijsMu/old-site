@@ -71,7 +71,7 @@ $$ X \sim \text{bin}(n,p) $$ iff.
 1. $$\mathcal X = \{0,1, ... , n\}$$
 2. $$f_{n,p}(x) = \binom{n}{x}p^xq^{n-x}$$
 
-Where we define $$q = 1-p$$ (it will later become clear that this simplifies calculations).
+Where we define $$q = 1-p$$ (it will later become clear that this simplifies calculations). The binomial coefficient is defined as $$\binom \alpha n = \frac {\alpha (\alpha - 1)\cdot ... \cdot (\alpha - n + 1)}{n!} for $$\alpha \in \mathbb R$$ and $$\n in \mathbb N_{\geq 0}$$, in that way $$\binom x n = 0$$ for $$x\in \mathbb N$$, $$x < n$$.
 
 An equivalent definition is that $$X$$ follows the distribution of $$Y_1 + ... + Y_n$$, where $$Y_i \sim \text{alt}(p)$$ i.i.d.
 You can prove this rigorously by induction on N:
