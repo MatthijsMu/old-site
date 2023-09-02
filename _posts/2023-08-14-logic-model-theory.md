@@ -7,32 +7,35 @@ categories: logic
 featured: false
 toc: 
   sidebar: right
+bibliography: 2023-08-14-logic-model-theory.md
 ---
 ## Introduction and Motivation
-We will dive into formal first-order logic! 
+As a sample blog post, I will dive into formal first-order logic.
 
-The idea of mathematical logic is to make a formal language to express "logical sentences", and set up rules to manipulate sentences in this language which we use to model our own everyday reasoning. Basically, we formalize reasoning and then reason about that system.
+The idea of mathematical logic is to make a formal language $$L$$ which contains all "logical sentences", and set up rules to manipulate sentences in this language. An example of such rules are proof trees modelling natural deduction, a technique we all find very "logical" and we use in all our everyday reasoning. Basically, we formalize reasoning by formulating it as a formal system and then we will argue about the strengths and weaknesses of that system. An example would be: *what properties can we not express in a sentence of this-or-that form?* It turns out, as we will see below, that first-order logic, for example, does not have a theory that can express that its model is a well-order. We understand what a well-order is, and yet we cannot define it by using first-order sentences alone.
 
-Why formalize our reasoning? Two example reasons: 
+Why do we want to abstract logic and then study it from a distance using the same logical reasoning that this systems tries to model? Two example reasons: 
  - First, to understand where our own mathematical reasoning can bring us. What *assumptions* (axioms) need to be part of a theory in order to derive certain *conclusions*? From a meta-level, what ideas can we *express* in first-order-logic? The theory of well-orders, for example, requires an axiom that states a property of subsets of a set (every subset of a well-ordered set has a least element). We will see that no equivalent statement exists in f.o.l., which is interesting: it means that we need a more expressible formal system to specify certain ideas.
  - Second, we may want to automate reasoning and/or theorem-proving. To let computers do this for us, we need a formal framework to model the reasoning process. The programming language Prolog allows you to define *facts* as instances of *atoms* and *rules* as clauses of *atoms*. It bases computations on the set of its facts, the so-called *knowledge base*. As we will see, there is a very tight correspondence between  Prolog's atoms and f.o.l.'s *relation symbols*, rules and *wff*'s, the knowledge base and a *structure*, and finally between the *querying* of a Prolog program and the *interpretation* of a sentence in a model.
 
+What does this look like in practice? That is what I want to tell you about in this post. It will basically comprise a very brief summary of the 2nd-year course in mathematical logic one gets to study at Radboud University. 
+
 ---
 
-## Defining a logical language.
+## Defining a logical language
 
 
-I will base the definitions on [Sets, Models and Proofs](), which was the book studied at my university. The book is super-rigorous and will start defining logical sentences in polish notation, because that uniquely fixes the structure of a sentence without the need of bracketing subclauses. Only then will they justify the bracketing notation, by tediously provjng the bijective correspondence between bracketed sentences and polish sentences. 
+I will base the definitions on <d-cite key="moerdijk2018sets"></d-cite>, which was the book studied at my university. The book is super-rigorous and will start defining logical sentences in polish notation, because that uniquely fixes the structure of a sentence without the need of bracketing subclauses. Only then will they justify the bracketing notation, by tediously provjng the bijective correspondence between bracketed sentences and polish sentences. 
 
 The book is in my opinion maybe a bit too rigorous, and I will skip this approach. You can probably justify the bracketed notation for yourself and this blog should not become more bureaucratic than a logic blog already is. Instead, I will define terms and wff's in the way most logic textbooks approach it, that is, using some unspoken of brackets in the right place to enforce syntax.
 
-By the way, I assume you are familiar with some set theory.
+By the way, I assume you are familiar with some set theory. If not, the first chapter of <d-cite key="garling2013course"></d-cite> excellent and almost as rigorous as it gets for a formal introduction.
 
 > **Definition** A *language* $$ L $$ is a triple $$(\text{con}(L),\text{fun}(L),\text{rel}(L)) $$, where:
 > - $$\text{con}(L) $$ is a set of *constants* or *constant symbols*.
 > - $$\text{fun}(L) $$ is a set of *function symbols*.
 > - $$\text{rel}(L) $$ is a set of *relation symbols*.
-> Every relation or function symbol comes with an *arity*, which is 
+> Every relation or function symbol comes with an *arity*, which is a number $$n\in \mathbb N _{\geq 0}$$ 
 
 Practically, we could do without constants and use function symbols with arity 0 instead. However, the distinction (or, different naming) is often useful in proofs that have differing cases for terms that are constants and terms that are functions applied to terms.
 
@@ -50,6 +53,9 @@ Additionally, we will use other symbols. We assume that all symbols are distinct
 
 > **Definition** (Kleene star notation) We denote the set of all finite strings over some alphabet $$\mathcal{A}$$, $$\mathcal{A}^* = \cup_{n=0}^\infty \mathcal{A}^n$$ .
 
+
+### The Terms
+
 > **Definition** The set of $$ L $$-terms of a language $$ L $$ is the smallest subset $$ T $$ of $$\mathcal{C}^*_L$$ such that:
 > 1. If $$c \in \text{con}(L)$$ then $$ c \in T $$
 > 2. If $$x $$ is a variable then $$x \in T$$
@@ -57,20 +63,39 @@ Additionally, we will use other symbols. We assume that all symbols are distinct
 
 I want to note two things:
 
-- The above objects are all (purely syntactical) strings of symbols! This is why the bracketed notation is a tad bit non-rigorous, because for example what is the exact length of such a term if we need to know? And where do the bracket symbols $$ ($$ come from $$) $$ in the first place? They are not in the alphabet!
+- The above objects are all (purely syntactical) strings of symbols! This is why the bracketed notation is a tad bit non-rigorous, because for example what is the exact length of such a term, do or don't we include bracket tokens? And where do the bracket symbols $$ ($$ come from $$) $$ in the first place? They are not in the alphabet!
 
  - Next, why is there a "smallest subset"? The definition means "smallest" in the sense that any set that satisfies 1., 2. and 3., must contain $$T$$ as a subset. Now why would such a set exist? Think about it in this way: if $$ \{T_\alpha\}_{\alpha\in I}$$ is some collection of sets that all satisfy 1. and 2. and 3., then $$T = \cap_{\alpha\in I}T_\alpha$$ will also contain all variables and constants, and since terms that are in $$T$$ are in $$T_\alpha$$ for all $$\alpha\in T$$, concatenation with a function symbol will keep them in all $$T_\alpha$$ and hence in $$T$$. That is why there must be a minimum set: if not, we take the intersection of two different minimal sets and reach a contradiction!
 
-> **Definition** (Substitution on $$L$$-terms) For $$t, s \in T$$ and $$x$$ a variable or a constant of $$L$$. We define $$t[s/x]$$, the *substitution of* $$s$$ *for* $$x$$ *in* $$t$$, as:
-> - if $$t = f(t_1, ..., t_n)$$ for some $$n$$-ary function symbol $$f$$ and terms $$t_1, ... , t_n \in T$$, then $$t[s/x] = f(t_1[s/x], ... , t_n[s/x]). 
+ Finally, for readers who are familiar with formal language theory in the field of computer science, yes the language defined above is indeed a *context-free* language generated by a context-free grammar. Computer scientists would maybe also want to do something about the ambiguity in the grammar that arises when no brackets are involved. On the other hand, they might want to think of sentences as an abstract syntax tree. In that case the polish notation would again make sense, because if we define the logical language as sentences in polish notations, we get a CFG with no need for brackets, namely with the grammar rules:
+
+$$
+ T \rightsquigarrow_1 f T T ... T 
+$$
+
+$$
+ T \rightsquigarrow_2 c
+$$
+
+$$
+ T \rightsquigarrow_3 x
+$$
+
+Where on the right-hand side of the first rule "$$\rightsquigarrow_1$$" there are exactly $$n$$ non-terminal symbols $$T$$, and this rule is defined separately for every $$n$$-ary symbol $$f\in \text{fun}(L)$$ (making it, in fact, a *rule schema*) and the rule "$$\rightsquigarrow_2$$" for every constant $$c\in \text{con}(L)$$, and the rule "$$\rightsquigarrow_3$$" for every variable $$x$$. We can show that this CFG is non-ambiguous, and a term in this notation corresponds to the depth-first traversal of the AST of the formula. You could parse this language $$T$$ in linear time from left to right, I suppose.
+
+Next, we define what it means to substitute a term $$s$$ into a constant or variable $$x$$ in a given term $$t$$.
+
+
+> **Definition** (Substitution on $$L$$-terms) For $$t, s \in T$$ and $$x$$ a variable or a constant of $$L$$: We define $$t[s/x]$$, the *substitution of* $$s$$ *for* $$x$$ *in* $$t$$, as:
+> - if $$t = f(t_1, ..., t_n)$$ for some $$n$$-ary function symbol $$f$$ and terms $$t_1, ... , t_n \in T$$, then $$t[s/x] = f(t_1[s/x], ... , t_n[s/x])$$. 
 > - if $$t $$ is a constant or a variable, then if $$t = x$$ we have $$t[s/x] = s$$ and otherwise $$t[s/x] = t$$
 
 We can prove by *structural* induction on terms that this immediately implies that $$t[s/x]$$ is again in $$T$$ for $$t,s\in T$$ and $$x$$ a constant or variable. The principle of structural induction means that we have to prove the statement for all constants and variables $$t$$ and also that the statement holds for $$f(t_1, ... t_n) \in T$$ for all $$f\in \text{fun}(L)$$ $$n$$-ary, if it already holds for $$t_1, ... t_n$$.
 
 ---
-## Well-formed formulas.
+## The formulas
 
-For formulas, we give a very similar definition that makes use of terms.
+For $$L$$-formulas, we give a very similar definition that makes use of $$L$$-terms.
 
 > **Definition** The set of formulas $$F$$ of a language $$L$$ is the smallest subset of $$\mathcal{C}_L^*$$ satisfying:
 > - It contains all *atomic formulas*, which are strings of the form:
@@ -83,7 +108,47 @@ For formulas, we give a very similar definition that makes use of terms.
 
 The reason that this is well-defined is because again, when a collection of sets satisfying 1. to 5. is intersected, this intersection satisfies 1. to 5. as well.
 
-This definition enables us to have an induction principle on $$F$$ as well. That is:
+The set of formulas, when we regard them as written in their polish notation, is again a non-ambiguous context-free language. We can think of them as being generated by:
+
+$$
+F \rightsquigarrow \land F F
+$$
+
+$$
+F \rightsquigarrow \lor F F
+$$
+
+$$
+F \rightsquigarrow \rightarrow F F
+$$
+
+$$
+F \rightsquigarrow \lnot F
+$$
+
+$$
+F \rightsquigarrow \exists x F
+$$
+
+$$
+F \rightsquigarrow \forall x F
+$$
+
+$$
+F \rightsquigarrow = T T
+$$
+
+$$
+F \rightsquigarrow r T T ... T 
+$$
+
+$$
+F \rightsquigarrow \bot
+$$
+
+The last rule is again a *rule schema* that is defined for every $$n$$-ary relation symbol $$r\in \text{rel}(L)$$. On the right-hand side of the $$\rightsquigarrow$$, we have precisely $$n$$ nonterminals $$T$$. The grammar for $$T$$ has been shown above.
+
+By minimality of the set of $$L$$-formulas, we can have an induction principle on $$F$$, just like we had on $$T$$! That is:
 
 > **Induction Principle on Formulas** If some statement holds for all atomic formulas, and if we have that (if the statement holds for $$\varphi \in F$$ and $$\psi \in F$$, then it holds for $$\varphi \land \psi$$, $$\varphi \lor \psi$$, $$\varphi \rightarrow \psi$$, $$\lnot \varphi$$, $$ \forall x \varphi$$ and for $$\exists x \varphi$$ for $$x$$), then the statement holds for all $$L$$-formulas.
 > **Proof** Let $$E$$ be the set of $$L$$-formulas for which the statement holds. Since it is given that $$E$$ satisfies 1. to 5., it follows by minimality of $$F$$ that $$F\subset E$$, so we are done.
@@ -104,7 +169,7 @@ With this induction principle, it is now simple to prove a recursion principle:
 > $$f(\varphi) = f_\forall(x, f(\psi))$$ if $$\varphi $$ is $$ \forall x \psi$$
 > $$f(\varphi) = f_\exists(x, f(\psi))$$ if $$\varphi $$ is $$\exists x \psi$$
 
-Notee: try not to confuse (meta) equalities with semtences using the *equality symbol*.
+Note: try not to confuse (meta) equalities the *equality symbol* that is used inside the sentences!
 
 > **Proof** (Sketch) 
 > - Unicity: let $$f,g$$ both satisfy the recursion and let $$\psi$$ be the *shortest* formula for which $$f(\psi) \not = g(\psi)$$. If $$\psi$$ is atomic, we see that this is not possible because $$f,g$$ are both fixed as $$f_a$$ on atomic formulas. So $$\psi$$ is composite. We can exhaust all cases and in every case we have to conclude that not all shorter subformula of $$\psi$$ can have the exact same image under $$f$$ as under $$g$$, hence $$\psi$$ is not shortest and we get a contradiction.
