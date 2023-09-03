@@ -9,7 +9,9 @@ toc:
   sidebar: right
 bibliography: 2023-08-14-logic-model-theory.md
 ---
+
 ## Introduction and Motivation
+---
 As a sample blog post, I will dive into formal first-order logic.
 
 The idea of mathematical logic is to make a formal language $$L$$ which contains all "logical sentences", and set up rules to manipulate sentences in this language. An example of such rules are proof trees modelling natural deduction, a technique we all find very "logical" and we use in all our everyday reasoning. Basically, we formalize reasoning by formulating it as a formal system and then we will argue about the strengths and weaknesses of that system. An example would be: *what properties can we not express in a sentence of this-or-that form?* It turns out, as we will see below, that first-order logic, for example, does not have a theory that can express that its model is a well-order. We understand what a well-order is, and yet we cannot define it by using first-order sentences alone.
@@ -20,10 +22,9 @@ Why do we want to abstract logic and then study it from a distance using the sam
 
 What does this look like in practice? That is what I want to tell you about in this post. It will basically comprise a very brief summary of the 2nd-year course in mathematical logic one gets to study at Radboud University. 
 
+
+## The language
 ---
-
-## Defining a logical language
-
 
 I will base the definitions on <d-cite key="moerdijk2018sets"></d-cite>, which was the book studied at my university. The book is super-rigorous and will start defining logical sentences in polish notation, because that uniquely fixes the structure of a sentence without the need of bracketing subclauses. Only then will they justify the bracketing notation, by tediously provjng the bijective correspondence between bracketed sentences and polish sentences. 
 
@@ -53,8 +54,10 @@ Additionally, we will use other symbols. We assume that all symbols are distinct
 
 > **Definition** (Kleene star notation) We denote the set of all finite strings over some alphabet $$\mathcal{A}$$, $$\mathcal{A}^* = \cup_{n=0}^\infty \mathcal{A}^n$$ .
 
+With the basic definitions established, we can define the *terms* of our language $$L$$.
 
 ### The Terms
+---
 
 > **Definition** The set of $$ L $$-terms of a language $$ L $$ is the smallest subset $$ T $$ of $$\mathcal{C}^*_L$$ such that:
 > 1. If $$c \in \text{con}(L)$$ then $$ c \in T $$
@@ -92,8 +95,9 @@ Next, we define what it means to substitute a term $$s$$ into a constant or vari
 
 We can prove by *structural* induction on terms that this immediately implies that $$t[s/x]$$ is again in $$T$$ for $$t,s\in T$$ and $$x$$ a constant or variable. The principle of structural induction means that we have to prove the statement for all constants and variables $$t$$ and also that the statement holds for $$f(t_1, ... t_n) \in T$$ for all $$f\in \text{fun}(L)$$ $$n$$-ary, if it already holds for $$t_1, ... t_n$$.
 
+
+### The formulas
 ---
-## The formulas
 
 For $$L$$-formulas, we give a very similar definition that makes use of $$L$$-terms.
 
@@ -200,15 +204,14 @@ Suppose I give you the formula $$ \varphi = \forall x R(x,y)$$. It expresses a p
 
 This cannot be right. The problem is precisely that occurences of some variables (namely $$x$$) in the substituted term $$t$$ get bound in $$\varphi[t/y]$$. Otherwise, this bifurcation of semantics would not happen. Hence, we make this type of substitution *non-legitimate*. Closed terms (no free variables in the term, that is) are of course always legitimate to substitute.
 
-## Structures and interpretation: defining truth
+## Structures and interpretation
+---
 
 So far, we have not yet spoken of the semantics or meaning of f.o.l.. Only in the previous section, I alluded to it in order to motivate legitimacy of substitutions, but I could have also thrown it at you without any motivation, and if you were naive and didn't have an idea of what the logical connectives etcetera *meant*, we might as well have used completely different symbols with no apparent semantics such as tables, chairs and beer mugs, and once we have developed a formal system to manipulate these syntactically it would make no difference as to which relationships between the names we would be able to derive.
 
 But we want to do logic because we want to understand our reasoning, and we want to be sure that the abstract systems defined to study it, actually matches our interpretation (semantics) or "understanding" of logic, whatever that means. As mathematicians, we value a rigorous definition of this "interpretation" and these "semantics" as well, so we develop them using *model theory*.
 
 The basic idea is that we take, on our meta-level from which we study the formal wff's, a meta-level set with on it $$n$$-ary functions and relations (not the symbols, but actual functions and relations from set theory). These we call the *interpretations* of the function and relation *symbols* in the logical sentences. We then recursively define what it means to interpret *terms*, then *closed formulas* and from this we derive a definition of truth. The development of this theory is largely attributed to Tarski. Let's begin.
-
----
 
 > **$$L$$-structure** an $$L$$-*structure* $$M$$ is a *nonempty* set $$M$$ together with:
 > - for every constant $$c \in \text{con}(L)$$ an element $$c^M\in M$$.
@@ -256,13 +259,27 @@ An interesting theorem says that $$T$$ is consistent iff. every one of its finit
 
 
 
----
 
-## Well-orders and the limitations of first-order logic
+
+## The limitations of first-order logic: well-orders
 
 A well-order is a set $$W$$ with an order relation $$\leq$$ on it such that for every nonempty subset $$S\subset W$$, $$S$$ has a *least* element $$l\in S$$, i.e. for all $$s\in S$$ we have $$l\leq s$$. Writing this theory in f.o.l. requires us to make a statement about all *subsets* of $$W$$ rather than all *elements* of $$W$$. This is nontrivial, because in the interpretation semantics we described above, we *quantify over the elements of a model*. So can it be done? The answer is no, and the proof of it makes use of the compactness theorem.
 
-## Proofs
+> **Compactness Theorem**
+> A theory $$T$$ has a model iff. every finite $$T'\subset T$$ has a model.
+
+We will use it without proof. The compactness theorem is a consequence of the completeness theorems, because proof trees are finite: $$\bot$$ is true for every model of $$T$$ implies by completeness that $$\bot$$ can be proved from every finite subset of $$T$$, and this implies by soundness that for every finite subset $$T'$$ of $$T$$ we have that $$T'\models \bot$$. 
+
+To show that well-orders have no first-order theory describing them, we consider the first-order formula $$\varphi_n \equiv \exists x_1 x_2 ... x_n \ x_1 < x_2 < ... < x_n$$, which expresses (in the order language $$L_{ord}$$ that has the binary relation symbol $$<$$) that there is an $$n$$-length strictly decreasing chain.
+
+Well-orders can be shown to have no infinite strictly decreasing chain $$x_1 > x_2 > ...$$, so if the first-order theory $$T$$ describes well-orders and has a model, the set of sentences $$T \cup (\cup_{n=1}^\infty \{\varphi_n\})$$ does not have a model. 
+
+But now we note that *any* finite $$T' \subset T \cup (\cup_{n=1}^\infty \{\varphi_n\})$$ can only contain a *finite number* of the sentences $$\varphi_n$$, hence there is a largest $$N\in mathbb N _{\geq 1}$$ such that $$\varphi_N \in T'$$. And thus we can take $$\mathbb N$$ as a model for $$T$$, since $$\mathbb N$$ is a well-order and it contains for any $$N$ a $$N$$-length strictly decreasing chain, namely $$1 < ... < N$$. 
+
+So if $$T$$ would model well-orders, then $$T \cup (\cup_{n=1}^\infty \{\varphi_n\})$$ has no model on the one hand, but it has a model by compactness, which leads to a contradiction. In other words, we have shown that the property of a set being well-ordered cannot be expressed using first-order sentences!
+
+## Proof systems
+---
 
 We say that $$T\models \varphi$$ for $$T$$ a $$L$$-theory and $$\varphi$$ a $$L$$-sentence, if for every model $$M$$ that satisfies $$T$$'s axioms, we have that $$M\models \varphi$$.
 
@@ -299,7 +316,7 @@ In the example, the bottom layer is the root, and the partial order relation is 
 
 > **Proof Tree** Given a logical language $$L$$, the set $$\mathcal T$$ of proof trees is the smallest set of marked trees over the set of $$L$$-formulas that satisfies the following closure properties:
 
- - Actually, you can look up the definition in the freely downloadable book [*Sets, Models and Proofs*](https://www.a-eskwadraat.nl/Onderwijs/Boekweb/Artikel/48/Dictaat/Downloaden). I don't want to literally copy their definition here, that feels too much like plagiarism.
+ - Actually, you can look up the definition in the freely downloadable book [*Sets, Models and Proofs*](https://www.a-eskwadraat.nl/Onderwijs/Boekweb/Artikel/48/Dictaat/Downloaden). I don't want to literally copy their definition here, that feels like plagiarism.
  - The general idea is that every connective and every quantor has an introduction rule to introduce it into a formula, and an elimination rule to eliminate it from a formula. Then there are assumption trees and finally a valid proof is a proof tree where all assumptions (leaves) except maybe those that occur in the *assumed* theory $$T$$ and/or the formula $$\exists x (x=x)$$ have been marked. 
 
  Once you have read the above definition in the provided book, you can check for yourself that the example tree I provided earlier is indeed a proof tree. It is a proof, or better, a proof schema (since it is more of a template where $$\varphi$$ is a completely abstract formula) of the *law of excluded third*. Any proof for this law makes use of $$\lnot E$$, and that is also why in *Intuitionistic Logic*, where $$\lnot E$$ is not one of the closure laws for proof trees, the law of excluded third does not hold.
