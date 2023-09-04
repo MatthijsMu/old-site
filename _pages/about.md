@@ -18,15 +18,12 @@ social: true  # includes social icons at the bottom of the page
 ---
 
 ---
-I am a BS student in Mathematics and Computer Science at [Radboud University](https://www.ru.nl/en), Nijmegen. My interests are complexity and algorithms, statistics, physics, but I'm also into abstract algebra. Currently, I would like to get involved in research, whether it be theoretical or applied.
+I am a BS student in Mathematics and Computer Science at [Radboud University](https://www.ru.nl/en), Nijmegen. My interests are still very broad: I have done electives in combinatorial group theory, linear programming, quantum mechanics and machine learning. Currently, I would like to get involved in research, whether it be theoretical or applied.
 
-Previously, my mathematical interests lead me to participate in the [Dutch Mathematical Olympiad](https://wiskundeolympiade.nl/docenten/info-in-english) (2021) where I placed 16th nationwide. My interest in mathematical modelling led to a project on optimizing blackjack strategies using Reinforcement learning. For this, I was awarded the first prize in the [OMO-PWS-Contest](https://www.omojaarverslag.nl/verslag2022/f/omoprijzen/omoprijzen-een-bijzondere-motiveringsprijs-voor-leerlingen) (2022).
+Previously, my mathematical interests lead me to participate in the [Dutch Mathematical Olympiad](https://wiskundeolympiade.nl/docenten/info-in-english) (2021) where I placed 16th nationwide. My interest in mathematical modelling led to a project on optimizing blackjack strategies using Reinforcement learning. For this, I was awarded the first prize in the [OMO-PWS-Contest](https://www.omojaarverslag.nl/verslag2022/f/omoprijzen/omoprijzen-een-bijzondere-motiveringsprijs-voor-leerlingen) (2022). This summer (2023), I participated in the [Cornell, Maryland, Max Planck Pre-doctoral Research School](https://cmmrs.mpi-sws.org/) where I got to meet many amazing cs students and researchers from all over the world, and got to follow lectures on their current research.
 
-This personal web page features an overview of my academic portfolio: it includes a blog on mathematics, statistics, physics and computer science, and in the future also projects and papers I wrote for myself or for university courses. 
+This personal web page gives an overview of my academic portfolio. It has a personal blog where I mostly share summaries of courses that I am excited about. And on the `Projects` page, you can find an overview of projects that I have been working on, either for university courses or as a personal interest.
 
-
-<!--- I may later include some of the teaching I have done. Its purpose is to create interesting reading for fellow students, while conveniently putting into practice my own knowledge and skills. 
--->
 
 <!--- 
 
