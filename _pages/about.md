@@ -22,7 +22,9 @@ I am a BS student in Mathematics and Computer Science at [Radboud University](ht
 
 Previously, my mathematical interests lead me to participate in the [Dutch Mathematical Olympiad](https://wiskundeolympiade.nl/docenten/info-in-english) (2021) where I placed 16th nationwide. My interest in mathematical modelling led to a project on optimizing blackjack strategies using Reinforcement learning. For this, I was awarded the first prize in the [OMO-PWS-Contest](https://www.omojaarverslag.nl/verslag2022/f/omoprijzen/omoprijzen-een-bijzondere-motiveringsprijs-voor-leerlingen) (2022). This summer (2023), I participated in the [Cornell, Maryland, Max Planck Pre-doctoral Research School](https://cmmrs.mpi-sws.org/) where I got to meet many amazing cs students and researchers from all over the world, and got to follow lectures on their current research.
 
-This personal web page gives an overview of my academic portfolio. It has a personal blog where I mostly share summaries of courses that I am excited about. And on the `Projects` page, you can find an overview of projects that I have been working on, either for university courses or as a personal interest.
+This personal web page gives an overview of my academic portfolio. It has a personal blog where I mostly share summaries of courses that I like. And on the `Projects` page, you can find an overview of projects that I have been working on, either for university courses or as a personal interest. 
+
+Finally, I enjoy drawing and painting in my spare time. Some of my favourite results can be found under `Art`.
 
 
 <!--- 
