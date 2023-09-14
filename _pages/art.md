@@ -140,7 +140,7 @@ In my spare time, I enjoy drawing in graphite or in coloured pencils, and painti
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="https://drive.google.com/uc?export=view&id=105HEnht6MjW9KkFHsQa-p1vQgphhL6A2" title="Westport road, Ireland. Acrylic paint" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="https://drive.google.com/file/d/105HEnht6MjW9KkFHsQa-p1vQgphhL6A2/view?usp=sharing" title="Westport road, Ireland. Acrylic paint" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
