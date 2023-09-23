@@ -1,10 +1,20 @@
 ---
-layout: cv
+layout: page
 permalink: /cv/
 title: CV
 nav: true
-nav_order: 4
-cv_pdf: Resume.pdf
-transcript_pdf: Transcript.pdf
-description: "An overview of my academic, professional and extracurricular activities. You can download my resume, as well as a transcript of records of courses at Radboud University, from the icons in the upper-right corner of this page."
+heading: 
 ---
+
+
+<center>
+If the embedded version of my CV does not work, you can download a copy <a href="/assets/pdf/Resume.pdf" target="_blank">here</a>.
+</center>
+
+<br>
+
+<center>
+<object data="/assets/pdf/Resume.pdf#view=FitH&pagemode=none" width="100%" height="800px" type="application/pdf">
+    <embed src="/assets/pdf/Resume.pdf#view=FitH&pagemode=none" width="100%" height="800px" type="application/pdf" />
+</object>
+</center>
