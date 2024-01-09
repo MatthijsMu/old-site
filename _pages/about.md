@@ -2,22 +2,21 @@
 layout: about
 title:
 permalink: /
-subtitle: BS Student Mathematics and Computer Science @ <a href="https://www.ru.nl/en">Radboud University Nijmegen</a>
+subtitle: <b>BS Student Mathematics and Computer Science @ <a href="https://www.ru.nl/en">Radboud University Nijmegen</a></b>
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
-  address: >
-    <p>matthijs.muis@ru.nl</p>
+  address: 
 
 news: true  # includes a list of news items
 latest_posts: true  # includes a list of the newest posts
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
----
+
 I am a BS student in Mathematics and Computer Science at [Radboud University](https://www.ru.nl/en), Nijmegen. My interests are still very broad: I have done electives in combinatorial group theory, linear programming, quantum mechanics and machine learning. Currently, I would like to get involved in research, whether it be theoretical or applied.
 
 Previously, my mathematical interests lead me to participate in the [Dutch Mathematical Olympiad](https://wiskundeolympiade.nl/docenten/info-in-english) (2021) where I placed 16th nationwide. My interest in mathematical modelling led to a project on optimizing blackjack strategies using Reinforcement learning. For this, I was awarded the first prize in the [OMO-PWS-Contest](https://www.omojaarverslag.nl/verslag2022/f/omoprijzen/omoprijzen-een-bijzondere-motiveringsprijs-voor-leerlingen) (2022). This summer (2023), I participated in the [Cornell, Maryland, Max Planck Pre-doctoral Research School](https://cmmrs.mpi-sws.org/) where I got to meet many amazing cs students and researchers from all over the world, and got to follow lectures on their current research.
